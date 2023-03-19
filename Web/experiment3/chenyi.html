@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学院简介-集美大学诚毅学院</title>
+    <style>
+        body,html{  /*整体*/
+            height: 100%;
+            width:100%;
+            margin:0%;
+            padding: 0%;
+            overflow-x:hidden;
+        }
+
+        .background {   /*顶上背景*/
+            position: absolute;
+            background-color: rgb(3, 78, 183);
+            margin-bottom: 0%;
+            padding-block: 1%;
+            width: 100%;
+        }
+        .background span.logo { /*logo*/
+            margin: 0%;
+            padding: 0%;
+            margin-left: 2%;
+        }
+
+        .background span.type { /*选择登入类型*/
+            margin-left: 55%;
+        }
+        .background span.type a {
+            margin: 0.2%;
+            padding: 0%;
+        }
+        .background span.type a:link {
+            text-decoration: none;
+        }
+        .background span.type a:hover {
+            color: white;
+        }
+        .img {  /*大图片*/
+            display: block;
+            width: 100%;
+        }
+
+        /*主导航栏*/
+        .top_nav {
+            background-color: rgb(3, 78, 183);
+            padding-block: 1.5em;
+            width:100%;
+        }
+        .top_nav a {    /*主导航栏链接*/
+            margin-inline: 0%;
+            color: white;
+            font-size: 2em;
+        } 
+        .top_nav span:nth-last-of-type(odd) {   /*奇数个span横向距离*/
+            margin-inline: 0.5em;
+        }
+        .top_nav span:first-of-type, .top_nav span:last-of-type{ /*首尾span的距离*/
+            margin-inline: 2em;
+        }
+
+        .top_nav a:link {   /*链接时*/
+            text-decoration: none;
+        }
+        .top_nav a:hover {  /*鼠标在链接上时*/
+            text-decoration: underline;
+            font-size: 2.5em;
+        }
+
+        .container {
+            margin-top: 2%;
+        }
+        .left_nav { /*左导航栏*/
+            background-color: rgb(3, 78, 183);
+            float: left;
+            font-size: 1.5em;
+            color: white;
+            width: 18%;
+            height: 6%;
+            margin: 0%;
+            padding: 0%;
+            margin-left: 5%;
+            text-align: center;
+        }
+        .menu { /*菜单*/
+            border: 2px gray solid;
+            background-color: white;
+            text-align: center;
+            
+        } 
+        .menu ul {  /*列表间的设置*/
+            list-style: none;
+            background-color: white;
+            padding-left: 0%;
+            margin-block: 10%;
+        }
+        .menu ul li {   /*列表每个格*/
+            text-align: center;
+            background-color: rgb(239, 239, 239) ;
+            margin-inline: 0.5em;
+            padding: 0%;
+            margin-block: 5%;
+        }
+        
+        .menu ul li a {
+            display: block;
+            text-decoration: none;
+        }
+        .menu ul li a:link {
+            color: black;
+        }
+        .menu ul li a:hover {
+            background-color: rgb(3, 78, 183);
+            color: white;
+        }
+        
+        .content {  /*文本盒子*/
+            float: right;
+            width: 65%;
+            margin: 0%;
+            margin-right: 5%;
+            padding: 0%;
+            border: 5px dashed skyblue;
+        }
+        .top_tag {  /*文本顶标签*/
+            border-bottom: 5px dashed skyblue;
+            padding: 0%;
+            margin-bottom: 1%;
+            text-align: center;
+            font-size: 1.7em;
+            font-family: fantasy;
+        }
+        
+        .text h1 {  /*正文标题*/
+            margin-top: 2%;
+            padding-top: 2%;
+            text-align: center;
+            font-weight: 200;
+            text-shadow: 1px 1px 2px #888,
+                        2px 2px 2px #999,
+                        3px 3px 2px #aaa,
+                        4px 4px 2px #bbb,
+                        6px 6px 2px #ccc;
+        }
+        
+        .text { /*文本内容*/
+            text-align: left;
+            text-indent: 2em;
+            background-color: aliceblue;
+            font-family: 宋体, 楷体, serif;
+            text-align: left;
+            margin-block: 1em;
+            margin-inline: 5%;
+            padding-inline: 5%;
+            line-height: 2em;
+            letter-spacing: normal;
+        }
+
+        .footer { /*页脚*/
+            width: 100%;
+            height: 70%;
+            margin: 0%;
+            padding: 0%;
+            margin-top: 100%;
+        }
+        .stone {    /*校名石头*/
+            margin-top: 2%;
+            width: inherit;
+            height: inherit;
+        }
+
+        .footer .footer_info {  /*信息*/
+            position: relative;
+            top: -70%;
+            left: 5%;
+        }
+        .footer .footer_info span { /*段落每行的距离*/
+            line-height: 2em;
+        }
+        .footer .footer_info :first-child { /*信息位置*/
+            float: left;
+        }
+        .footer .footer_info :last-child {
+            position: relative;
+            top: -70%;
+
+        }
+        
+        .QRcode {   /*二维码*/
+            position: relative;
+            top: -65%;
+            left: 5%;
+            margin-left: 80%;
+        }
+        .QRcode p { /*二维码信息*/
+            margin: 0%;
+            padding: 0%;
+            font-size: small;
+            width: 131px;
+        }
+
+        .copyright {    /*版权解释*/
+            position: relative;
+            top: -60%;
+            left: 5%;
+        }
+
+    </style>
+</head>
+<body>
+    <!--顶上背景-->  
+    <div class="background">
+        <!--校名logo-->
+        <span class="logo">
+            <img src="./Images/logo.png" alt="诚毅学院logo">
+        </span>
+
+        <!--图片右方链接-->
+        <span class="type">
+            <span><a href="">教师</a></span>
+            <span>|</span>
+            <span><a href="">考生</a></span>
+            <span>|</span>
+            <span><a href="">English</a></span>
+            <span><img src="./Images/search.png" alt="搜索"></span>
+        </span>
+    </div>
+
+    <!--主页大图-->
+    <div>
+        <img class="img" src="./Images/主页.png" alt="主页">   <!--css样式是放在img中而不是div中-->
+    </div>
+
+    <!--主导航栏-->
+    <div class="top_nav">
+        <span></span>
+        <span><a href="">首页</a></span>
+        <span></span>
+        <span><a href="">学院概况</a></span>
+        <span></span>
+        <span><a href="">机构设置</a></span>
+        <span></span>    
+        <span><a href="">党建思政</a></span>
+        <span></span>
+        <span><a href="">教学科研</a></span>
+        <span></span>
+        <span><a href="">师资队伍</a></span>
+        <span></span>
+        <span><a href="">对外合作</a></span>
+        <span></span>
+        <span><a href="">招生就业</a></span>
+        <span></span>
+        <span><a href="">团学工作</a></span>
+        <span></span>
+        <span><a href="">校园服务</a></span>
+        <span></span>
+    </div>
+
+    <!--主页下大框-->
+    <div class="container">
+        <!--左导航栏-->
+        <div class="left_nav">
+            <span>学院概况</span>
+            <!--左导航栏下菜单-->
+            <div class="menu">
+                <ul>
+                    <li><a href="">学院简介</a></li>
+                    <li><a href="">董事会</a></li>
+                    <li><a href="">监事会</a></li>
+                    <li><a href="">学院领导</a></li>
+                    <li><a href="">院名徽志</a></li>
+                    <li><a href="">校园风光</a></li>
+                    <li><a href="">航拍诚毅</a></li>
+                    <li><a href="">宣传短片</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--内容框-->
+        <div class="content">
+            <!--内容导航-->
+            <div class="top_tag">
+                学院简介
+            </div>
+
+            <!--文本内容-->
+            <div class="text">
+                <h1>集美大学诚毅学院简介</h1>
+                <p>
+                    集美大学诚毅学院创办于2003年，是经国家教育部批准、由福建省重点建设高校集美大学与福建集美大学教育发展基金会联合举办的独立学院。
+                </p>
+                <p>
+                    学院地处著名华侨领袖陈嘉庚先生的故乡——福建厦门集美。学院坚持社会主义办学方向，弘扬嘉庚精神，秉承“诚毅”校训，培养基础扎实、知识面宽、特长明显，具有创新精神、实践能力和社会责任感的应用型人才，服务经济社会发展，建设办学特色鲜明、办学条件优良、教学质量高、社会信誉好的应用型高等学校。
+                </p>
+                <p>
+                    学院以全日制本科学历教育为主体，现有在校生近15000人，设置12个教学系（院）、37个本科专业，涵盖工学、管理学、经济学、文学、法学、理学、教育学、艺术学八个学科门类；面向全国29个省（市、自治区）招生，纳入国家计划。学生修完教学计划规定的全部课程并获得规定学分，符合毕业要求的，获颁教育部承认学历并经电子注册的集美大学诚毅学院毕业证书；符合学士学位授予条件的，由集美大学诚毅学院授予相应的学士学位。
+                </p>
+                <p>
+                    学院坚持“控制总量、提升层次、优化结构”的师资队伍建设理念，形成一支以自有师资和集美大学选派教师为主，以外聘教师为辅的高素质专任教师队伍。现有专任教师700多人，自有专任教师中，高级职称教师占47%，硕士学位以上教师占93%，双师双能型教师占67%。教师中，有省优秀教师3人、省哲学社会科学领军人才1人、省高校新世纪优秀人才支持计划2人、省高校杰出青年科研人才培育计划4人。
+                </p>
+                <p>
+                    学院坚持“以本为本”，以建设应用型本科，培养新时代高素质应用型人才为目标，不断深化教育教学改革。结合区域产业结构，组建互联网+、电子信息、智能制造、现代航运、文化产业、自贸区商务六大专业集群，进一步凸显应用型人才培养特色。现有省级教学团队3个、示范性应用型专业群1个、一流本科专业建设点4个、特色专业3个、服务产业特色专业3个、创新创业教育改革试点专业6个、本科高校专业综合改革试点项目4个、人才培养模式创新实验区3个、精品课程6门、精品资源共享课7门、线下一流本科课程5门、线上线下混合式一流课程3门、社会实践一流课程3门、虚拟仿真实验教学一流课程7门，本科优秀特色教材1部、大学生校外实践教育基地3个、新工科研究与改革实践项目2项、新文科研究与改革实践项目1项等。在全国大学生“挑战杯”、数学建模、机器人、电子设计、智能车、电子商务“三创”赛等各级各类学科竞赛中获奖近900项。随着办学质量的不断提高，学院的社会影响力也日益上升。2016-2020年，学院学科竞赛成果连续三年蝉联全国民办高校和独立学院排行榜第2名；在中国科教评价网《2021-2022年中国独立学院排行榜》中排名第8位。
+                </p>
+                <p>
+                    学院贯彻落实国家创新驱动发展战略，坚持“围绕应用、突出专业、面向市场、服务产业”的原则，不断深化科研机制体制改革。学院高度重视学科建设，积极发挥多学科办学优势，鼓励学科交叉融合科研力量，实施科研团队和科研平台建设，加强联合攻关，提高集成创新能力。依托国家体育总局体育文化中心“体育文化研究基地”、中国物流学会产学研基地、集美大学城市与区域发展研究所等科研平台，形成了嘉庚精神进社区、水上运动民族传统体育、文化创意、非遗手工作品制作、木拱廊桥、人工智能在电子信息产业的应用等特色研究方向。近年来，学院共承担各级各类科研项目近560项，主动融入国家和地区发展战略，开展校企、校地、校校合作，加强科研成果转化，不断提升服务地方经济社会发展能力。
+                </p>
+                <p>
+                    学院深入开展校企合作和对外交流合作，构建多维度、多元化开放办学模式。与中软国际等大中型企业开展深度校企合作，共建二级学院、人才培养实践基地、实验室，设立奖学奖助金等，联合培养应用型人才，推进教学与生产、专业链与产业链的“无缝对接”。现有教育部高教司产学合作协同育人项目15项。与英、美、澳、新、台湾等10多所境外高校开展校际交流与合作，现有4+1、2+2等出国留学及短期研修项目。
+                </p>
+                <p>
+                    学院深入开展校企合作和对外交流合作，构建多维度、多元化开放办学模式。与中软国际等大中型企业开展深度校企合作，共建二级学院、人才培养实践基地、实验室，设立奖学奖助金等，联合培养应用型人才，推进教学与生产、专业链与产业链的“无缝对接”。现有教育部高教司产学合作协同育人项目15项。与英、美、澳、新、台湾等10多所境外高校开展校际交流与合作，现有4+1、2+2等出国留学及短期研修项目。
+                </p>
+                <p>
+                    学院努力为学生成长成才创造优良的学习环境。校园占地面积550多亩，校园建筑特色鲜明，2009年，学院校区和集美大学新校区荣获“新中国成立60周年百项经典暨精品工程”。学院还拥有先进、齐全的教学、实验设施，拥有高标准实验室、游泳馆、体育馆、影剧院、图书馆、琴房等，其中两项硬件开创全国高校第一：拥有全国首台360度视景航海船舶操纵模拟器，拥有国内首家采用射频识别（RFID）馆藏管理系统的智能化图书馆。
+                </p>
+                <p>
+                    “嘉庚精神立校，诚毅品格树人”的办学理念成为激励一代代诚毅师生严谨治学、诚信做人的精神源泉，也是推动学院向应用型大学不断探索与创新的不竭动力。随着教育改革创新不断引向深入，新时代高等教育的蓝图正逐步展开。风好正是扬帆时，学院将以创建“一流诚毅”为核心，在培养具有“诚毅”品格特质的国际化应用型人才的征程上继续阔步前进！
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--页脚-->
+    <div class="footer">
+        <img  class="stone" src="./Images/stone.png" alt="集美大学诚毅学院">
+        <!--页脚信息-->
+        <div class="footer_info">
+            <span>
+                <p>
+                    地 址：厦门市集美区集美大道199号 <br>
+                    传 真：0592-6182998 <br>
+                    学院信箱: chengyi@jmu.edu.cn <br>
+                    招生热线：0592-6182895、6183328、6181516、6180587
+                </p>
+            </span>
+            <span>
+                <p>
+                    电 话：0592-6183185 <br>
+                    邮政编码： 361021
+                </p>
+            </span>
+        </div>
+
+        <!--二维码-->
+        <div class="QRcode">
+            <img src="./Images/QRcode.jpg" alt="官方微信">
+            <p>
+                微信公众号：CYCJMU
+            </p>
+        </div>
+
+        <!--版权说明-->
+        <div class="copyright">
+            <p>
+                Copyright &copy; 2021 Chengyi College, Jimei University, All Rights Reserved.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
